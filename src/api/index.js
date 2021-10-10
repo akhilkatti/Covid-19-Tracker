@@ -9,10 +9,10 @@ export const fetchData = async ( country ) => {
      }
     
      try {
-        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changeableUrl);
+        const { data: { confirmed, deaths, lastUpdate } } = await axios.get(changeableUrl);
 
 
-        return  { confirmed,recovered, deaths, lastUpdate };
+        return  { confirmed, deaths, lastUpdate };
  
      } catch (error) {
           console.log(error);
